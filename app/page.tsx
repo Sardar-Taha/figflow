@@ -8,7 +8,7 @@ import ButtonComp from "@/src/components/button";
 export default function Home() {
   return (
     <main className="min-h-screen container mx-auto px-4 flex justify-center items-center">
-      <div className="w-full sm:w-[520px] border border-borderDarkColor rounded-lg p-8">
+      <div className="w-full sm:w-[520px] border border-borderDarkColor rounded-lg p-4 sm:p-8">
         <Image
           src={logo}
           draggable={false}
