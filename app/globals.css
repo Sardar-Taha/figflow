@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-color: #040816;
+}
+
+select {
+  background: url(../public/images/arrow-down.png) no-repeat right #ddd;
+  background-size: 15px;
+  -webkit-appearance: none;
+  background-position-x: 98%;
+}
