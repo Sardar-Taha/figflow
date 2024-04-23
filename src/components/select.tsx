@@ -66,7 +66,7 @@ const SelectComponent = ({
       {dropdownCollapsed && (
         <div
           ref={dropdownRef}
-          className="absolute flex flex-col z-[2] bg-[#040816] gap-2 left-0 top-14 rounded-[3px] w-full max-h-[200px] overflow-y-auto bg-transparent border border-borderDarkColor py-2"
+          className="absolute flex flex-col z-10 bg-red-500 gap-2 left-0 top-14 rounded-[3px] w-full max-h-[200px] overflow-y-auto bg-transparent border border-borderDarkColor py-2"
           onClick={() => setDropdownCollapsed(false)}
         >
           {optionsArray &&
