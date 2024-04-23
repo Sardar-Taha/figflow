@@ -6,9 +6,11 @@ import { twMerge } from "tailwind-merge";
 const SelectComponent = ({
   placeholder,
   optionsArray,
+  className,
 }: {
   placeholder: string;
   optionsArray: string[];
+  className?: string;
 }) => {
   const [dropdownCollapsed, setDropdownCollapsed] = useState<boolean>(false);
   const [selectedValue, setSelectedValue] = useState<string>(
@@ -40,7 +42,10 @@ const SelectComponent = ({
       <div
         onClick={() => setDropdownCollapsed((prev) => !prev)}
         className={twMerge(
-          "w-full bg-transparent border border-borderDarkColor cursor-pointer relative px-4 h-12 placeholder:text-opacity-50 text-white outline-none rounded-[3px] focus:border-white focus:border-opacity-30 mt-2"
+          `w-full bg-transparent border border-borderDarkColor cursor-pointer relative px-4 h-12 placeholder:text-opacity-50 text-white outline-none rounded-[3px] focus:border-white focus:border-opacity-30 mt-2 ${
+            dropdownCollapsed && "border-white border-opacity-30"
+          }`,
+          className
         )}
       >
         <IoIosArrowDown
