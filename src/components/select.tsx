@@ -16,8 +16,8 @@ const SelectComponent = ({
   const [selectedValue, setSelectedValue] = useState<string>(
     placeholder ? placeholder : ""
   );
-  const ref = useRef<any>(null);
-  const dropdownRef = useRef<any>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleClickOutside = (event: any) => {
@@ -54,7 +54,7 @@ const SelectComponent = ({
           } text-xl z-[1] right-2`}
         />
         <p
-          className={`relative top-1/2 -translate-y-1/2 text-white ${
+          className={`relative select-none top-1/2 -translate-y-1/2 text-white ${
             selectedValue === placeholder
               ? "text-opacity-50"
               : "text-opacity-100"
