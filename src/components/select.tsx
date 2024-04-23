@@ -55,7 +55,9 @@ const SelectComponent = ({
         />
         <p
           className={`relative top-1/2 -translate-y-1/2 text-white ${
-            placeholder && "text-opacity-50"
+            selectedValue === placeholder
+              ? "text-opacity-50"
+              : "text-opacity-100"
           }`}
         >
           {selectedValue}
@@ -64,7 +66,7 @@ const SelectComponent = ({
       {dropdownCollapsed && (
         <div
           ref={dropdownRef}
-          className="absolute flex flex-col z-[2] bg-darkish gap-2 left-0 top-14 rounded-[3px] w-full max-h-[200px] overflow-y-auto bg-transparent border border-borderDarkColor py-2"
+          className="absolute flex flex-col z-[2] bg-[#040816] gap-2 left-0 top-14 rounded-[3px] w-full max-h-[200px] overflow-y-auto bg-transparent border border-borderDarkColor py-2"
           onClick={() => setDropdownCollapsed(false)}
         >
           {optionsArray &&
